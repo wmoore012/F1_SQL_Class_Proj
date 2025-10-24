@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# JetBrains (DataGrip, IntelliJ, etc.)
+.idea/
+*.iml
+out/
+
+# VS Code
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+test_*.ipynb
+
+# Python envs (only if you add notebooks or scripts)
+.venv/
+venv/
+ENV/
+.env
+
+# Logs
+*.log

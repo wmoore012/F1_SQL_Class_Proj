@@ -2,7 +2,7 @@
 
 ## 👥 Team Members
 
-**Troy Benner** | **Kiefer Jenny** | **Will Moore**
+ **Will Moore** | **Kiefer Jenny** | **Troy Benner**
 
 *MS in Data Science and Business Analytics*
 *UNC Charlotte (UNCC)*

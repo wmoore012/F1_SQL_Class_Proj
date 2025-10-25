@@ -61,37 +61,63 @@ This repository translates our original MySQL queries into **Pandas** operations
 
 ## 📊 Dataset Information
 
-### Current Setup: Mini Sample Dataset
+### Current Setup: Full Historical Dataset ✅
 
-The repository includes a **mini sample dataset** (`data/f1/`) with 4 drivers and 2 races for demonstration purposes. The notebook runs immediately without additional downloads.
+The repository includes the **complete F1 dataset** (`data/f1/`) with 70+ years of racing data (1950-2024):
 
-### Upgrading to Full Historical Data
+- **861 drivers** across F1 history
+- **1,125 races** from 1950 to 2024
+- **589,081 lap times** recorded
+- **11,371 pit stops** analyzed
+- **26,759 race results** with detailed statistics
 
-To analyze complete F1 history (1950-2020+):
+**Data Source:** [Formula 1 World Championship (1950-2024)](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020) by Rohan Rao on Kaggle
 
-1. **Download** the [Kaggle Formula 1 World Championship dataset](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020) by Rohan Rao
-2. **Extract** these CSV files:
-   - `drivers.csv`
-   - `results.csv`
-   - `races.csv`
-   - `driver_standings.csv`
-   - `lap_times.csv`
-   - `pit_stops.csv`
-   - `qualifying.csv`
-3. **Replace** the files in `data/f1/` with the full dataset (keeping the same filenames)
-4. **Run** the notebook — no code changes needed!
+### Running with Your Own Data
 
-**Alternative:** Set an environment variable to point to your data location:
+To use a different data location:
+
+**Option 1: Environment Variable**
 ```bash
 export F1_DATA_DIR="/path/to/your/kaggle/f1/data"
+jupyter notebook f1_single_race_860.ipynb
 ```
+
+**Option 2: Replace Files**
+1. Download the [Kaggle F1 dataset](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020)
+2. Replace the CSV files in `data/f1/` with your versions
+3. Run the notebook — no code changes needed!
 
 ---
 
-## 🚀 Quick Start
+## 👀 How to View the Analysis
 
-### Option 1: Run the Jupyter Notebook (Recommended)
+### Option 1: View Online (No Installation Required) ⭐ **Recommended for Recruiters**
 
+**Interactive Notebook Viewer (nbviewer):**
+```
+https://nbviewer.org/github/wmoore012/F1_SQL_Class_Proj/blob/main/f1_single_race_860.ipynb
+```
+✅ Always renders correctly, even with large notebooks
+✅ Shows all outputs, charts, and code
+✅ No GitHub account needed
+
+**GitHub Preview:**
+```
+https://github.com/wmoore012/F1_SQL_Class_Proj/blob/main/f1_single_race_860.ipynb
+```
+✅ Quick preview directly on GitHub
+⚠️ May not render if file size exceeds limits
+
+### Option 2: Run Locally (Full Interactivity)
+
+**Prerequisites:**
+```bash
+# Install Python 3.11+ and pip
+pip install -r requirements.txt
+```
+
+**Launch the Notebook:**
 ```bash
 # Navigate to project directory
 cd "F1 Racing SQL Project"
@@ -100,10 +126,15 @@ cd "F1 Racing SQL Project"
 export F1_DATA_DIR="/path/to/full/kaggle/data"
 
 # Launch Jupyter
-jupyter notebook f1_sql_annotated_and_visuals.ipynb
+jupyter notebook f1_single_race_860.ipynb
 ```
 
-### Option 2: View SQL Queries
+**What's Included:**
+- ✅ Pre-run outputs (all charts and tables already visible)
+- ✅ Static PNG charts (GitHub-compatible, no interactive HTML)
+- ✅ Full F1 dataset (1950-2024) in `data/f1/` directory
+
+### Option 3: View SQL Queries Only
 
 Open `F1 Racing.sql` in your preferred SQL client (DataGrip, DBeaver, MySQL Workbench, etc.) to see the original SQL queries.
 
@@ -113,17 +144,26 @@ Open `F1 Racing.sql` in your preferred SQL client (DataGrip, DBeaver, MySQL Work
 
 ```
 F1 Racing SQL Project/
-├── f1_sql_annotated_and_visuals.ipynb  # Main analysis notebook
+├── f1_single_race_860.ipynb             # Main analysis notebook (pre-run with outputs)
 ├── F1 Racing.sql                        # Original SQL queries
-├── data/f1/                             # Sample F1 dataset (7 CSV files)
+├── requirements.txt                     # Python dependencies
+├── data/f1/                             # Full F1 dataset (14 CSV files, 1950-2024)
 │   ├── drivers.csv
 │   ├── results.csv
 │   ├── races.csv
 │   ├── driver_standings.csv
 │   ├── lap_times.csv
 │   ├── pit_stops.csv
-│   └── qualifying.csv
-├── FinalProject_Deliverable_4(Group5).docx  # Original project documentation
+│   ├── qualifying.csv
+│   ├── circuits.csv
+│   ├── constructors.csv
+│   ├── constructor_results.csv
+│   ├── constructor_standings.csv
+│   ├── seasons.csv
+│   ├── sprint_results.csv
+│   └── status.csv
+├── FinalProject_Deliverable_4(Group5).docx  # Course deliverable (Word)
+├── FinalProject_Deliverable_4(Group5).pdf   # Course deliverable (PDF)
 ├── F1 Racer Efficiency.pptx             # Project presentation
 ├── LICENSE                              # MIT License
 └── README.md                            # This file
@@ -200,7 +240,7 @@ Our analysis of the **2012 Malaysian Grand Prix** revealed:
 
 ## 🤝 About This Project
 
-This project was developed as part of a **graduate-level database course at UNC Charlotte**. It demonstrates real-world SQL and data analysis skills applicable to:
+This project was developed as part of a **graduate-level database course at UNC Charlotte** in Charlotte, NC Spring 2025. It demonstrates real-world SQL and data analysis skills applicable to:
 
 - 📊 **Data Analyst roles** — Complex SQL queries, data cleaning, visualization
 - 🏎️ **Sports Analytics** — Performance metrics, efficiency analysis, predictive insights
@@ -210,6 +250,6 @@ This project was developed as part of a **graduate-level database course at UNC 
 ### Team Members
 
 **Troy Benner** | **Kiefer Jenny** | **Will Moore**
-*MS in Data Science and Business Analytics, UNC Charlotte*
+*Master of Science in Data Science and Business Analytics, UNC Charlotte*
 
 **Contact:** Available for data analyst/scientist opportunities. See our portfolios for more projects!

@@ -1,0 +1,10 @@
+# F1 Racing SQL Project - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+pandas>=2.0.0
+plotly>=5.0.0
+kaleido>=0.2.1
+pydantic>=2.0.0
+jupyter>=1.0.0
+nbconvert>=7.0.0
+
